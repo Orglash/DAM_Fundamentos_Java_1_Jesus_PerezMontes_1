@@ -2,15 +2,18 @@ package com.company;
 
 import java.util.Scanner;
 
+
 public class Main {
     //Función de petición de número con verificación de tipo de dato.
     public static double pideCoeficiente() {
         Scanner coeficiente = new Scanner(System.in);
         while(!coeficiente.hasNextDouble()){
-            System.out.println("Introduzca un número: \n");;
             coeficiente = new Scanner(System.in);
         }
+        //Cerramos el scanner.
+        coeficiente.close();
         return coeficiente.nextDouble();
+
     }
     //Función que comprueba si la ecuación tiene soluciones reales, y llama a las funciones de cálculo.
     public static void comprobacionReales (double a, double b, double c){
